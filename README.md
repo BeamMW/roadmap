@@ -10,20 +10,20 @@ The roadmap can be roughly divided into three tracks: the Wallet track, the DeFi
 
 ## Wallet Track
 
-### 5.1 (July - August, 2020)
+### [5.1 (July - August, 2020)](https://github.com/BeamMW/roadmap/projects/1)
 
 Eager Electron major version has started with the release of the 5.0 and the subsequent hard fork on July 28th 2020 that has activated Lelantus MW and Confidential Asset support in Beam nodes. It also changed the mining algorithm to BeamHash III, the last of the two planned PoW updates that Beam has announced at launch. As usual, each major version is followed by several minor ones, each delivering a set of features and enhancements that do not require a consensus change.
 
 Work on the 5.1 version has started immediately after the release of 5.0. It is already in the testing phase and scheduled to be released in the upcoming weeks. This version includes several important features and improvements. 
 
-#### Max privacy
+#### [Max privacy](https://github.com/BeamMW/roadmap/issues/1)
 
 Max Privacy transactions utilize the new Lelantus MW infrastructure that was added in the recent hard fork and the related 5.0 version. Each such transaction contains two parts. First, the Sender submits UTXOs into the shielded pool with a max anonymity set of 64K. Then, Receiver extracts a completely new set of UTXOs that are completely unlinked from the previous history from the pool and can use it for further transactions. The time between these two parts is important as it allows for a sufficient number of other UTXOs to accumulate in the pool and provide the required anonymity set. Beam CLI wallets allow users to perform these operations separately for maximum control. In UI wallets, this operation is seamless and is built into standard Send and Receive operations.
 
 The specific window within which the anonymity set is maximal depends on the rate of Max Privacy transactions, the more they are used, the faster maximum anonymity is reached. This information is monitored and displayed by the wallet, so that  at any time the user can know the exact anonymity set of each UTXO. The manual control, however, is not required since the wallet automatically selects the best UTXOs for each transaction, including the ability to send LelantusMW and Mimblewimble UTXOs in a single transaction. 
 
 
-#### Offline payments
+#### [Offline payments](https://github.com/BeamMW/roadmap/issues/3)
 
 Since Mimblewimble is inherently an interactive protocol, both the sender and the receiver need to participate in creation of the transaction. This introduces a very different user interface from what we are used to in other crypto currencies. However, using the LelantusMW technology, Beam has built an ability for senders to send funds non interactively even when the receiver is not online. We called this feature offline payments and it comes in two different flavors: using vouchers and using the offline address. 
 
@@ -33,44 +33,44 @@ The second option, that is currently planned for 5.2 version, uses a single ‘o
 
 
 
-#### Atomic Swap improvements
+#### [Atomic Swap improvements](https://github.com/BeamMW/roadmap/issues/4)
 
 Atomic Swaps are a great and completely confidential decentralized way to securely exchange Beams for BTC, LTC and QTUM without any third party. In this version this feature becomes even better with **replacing intermediate outputs and inputs with SegWit**, lowering the fees for the swap significantly. We also provide optimal fee rate recommendations directly from the respective blockchains thus removing the necessity to obtain them manually. 
 
-#### Redesigned settings
+#### [Redesigned settings](https://github.com/BeamMW/roadmap/issues/2)
 
 As more features are added into the wallet the settings page gets more crowded, so we have decided to redesign it and create logical groups to simplify finding and accessing the relevant settings. 
 
 
 
-### 5.2 (September - November, 2020)
+### [5.2 (September - November, 2020)](https://github.com/BeamMW/roadmap/projects/2)
 
 
-#### Beam Vault and Secure Sync 
+#### [Beam Vault and Secure Sync](https://github.com/BeamMW/roadmap/issues/5) 
 
 Beam SBBS is a great decentralized encrypted messaging system that allows wallet to interactively create MW transactions. It is however limited by design to only hold the message for 12 hours after which the message will expire and is no longer available for the recipients. Beam Vault is a centralized but trustless service that can store SBBS messages for longer periods of time. It can also be used to synchronize Beam Wallet that uses the same seed across multiple devices, something that was previously problematic and hence discouraged. As SBBS will gain more function with addition of DeFi functionality this service will be even more useful as a complementary and backup option for the SBBS system.
 
-#### Address Book improvement
+#### [Address Book improvement](https://github.com/BeamMW/roadmap/issues/6)
 
 The Address Book feature is not new. It appeared in all wallet versions from the very beginning. It was, however, hardly used as most transactions used ad hoc SBBS addresses and hence writing them down was irrelevant. In few cases where permanent addresses were used, they are usually related to either exchanges or pools. However, with the addition of offline payments and Confidential Assets, the address book takes on new roles and needs to be improved and updated.
 
-#### Trezor T support
+#### [Trezor T support](https://github.com/BeamMW/roadmap/issues/7)
 
 We are planning to roll out a custom firmware for Trezor T that supports Beam with integration into Beam Desktop Wallet. Ledger X development is more difficult and still in progress.
 
-#### Swaps with BSV, BCH, Dash and more
+#### [Swaps with BSV, BCH, Dash and more](https://github.com/BeamMW/roadmap/issues/8)
 
 More coins will be added to our Atomic Swap support, mostly BTC forks. These will include BCH, DASH and BSV. We are also looking at RVN and probably a few others.
 
-#### Beam Blockchain Explorer improvements.
+#### [Beam Blockchain Explorer improvements](https://github.com/BeamMW/roadmap/issues/9)
 
 Following the introduction of new features we need to reflect their state in the blockchain explorer and related APIs. These should include statistics for Atomic Swaps offered and accepted, The current state of the LelantusMW pool including estimated hold duration for achieving maximum anonymity set.
 
-#### Wallet UI for Confidential Assets
+#### [Wallet UI for Confidential Assets](https://github.com/BeamMW/roadmap/issues/10)
 
 Beam UI Wallets should be able to transact using any existing Confidential Asset, in addition to native Beam coins. Since CAs inherit all properties of Beam coins, it is possible to seamlessly mix different asset types within the same transaction. The challenge is to integrate this functionality into Beam UI in a way that would not negatively impact its usability, while still being able to support all relevant use cases for power users.
 
-#### Beam Web Wallet and Wallet Service Mainnet release
+#### [Beam Web Wallet and Wallet Service Mainnet release](https://github.com/BeamMW/roadmap/issues/11) 
 
 We have recently released the Testnet version of Beam Web Wallet and Wallet Service, which is a centralized but trustless backend component able to relay SBBS messages and handle the connectivity layer for multiple wallet processes. Both components still require a lot of work to be ready for production including extensive security and stability testing, which is why their release is most likely to take place towards the end of the 5.2 time frame.
 
@@ -87,23 +87,23 @@ Scriptless Scripts and Beam Contracts together provide a powerful infrastructure
 
 Since most of the DeFi tasks require a lot of research and prototyping  we will first release a series of POC and Testnet versions before deciding what is ready to be integrated into the mainnet wallets. Here is a breakdown of the planned milestones for Beam DeFi Track, roughly aligned with wallet release schedule.
 
-### 5.2 timeframe (September - November 2020)
+### [5.2 timeframe (September - November 2020)](https://github.com/BeamMW/roadmap/projects/3)
 
-#### Beam Contract architecture POC
+#### [Beam Contract architecture POC](https://github.com/BeamMW/roadmap/issues/12)
 
 First POC of the Beam Contract technology should include ability to create contracts with basic scripting capabilities and define clear APIs to use them. Most of this work is already in early design and research stages. 
 
-#### Oracles
+#### [Oracles](https://github.com/BeamMW/roadmap/issues/13)
 
 In order to enable DeFi applications, we need to use oracles that provide reference price points for the traded assets. There are several possibilities to implement oracles either onchain to be used by Beam Contracts or using SBBS infrastructure to provide signed and verifiable information directly to wallets to be used in the process of negotiation and creating P2P trading contracts between the users. We are currently researching the possibility of building the oracles as well as integration with existing oracle providers.
 
-#### Perpetual swaps app
+#### [Perpetual swaps app](https://github.com/BeamMW/roadmap/issues/14)
 
 One of the first applications we are considering are Perpetual Swaps, which are a specific implementation of the futures contracts without a definite expiration date. The application will utilize SBBS for creating contracts and Laser Beam payment channels for locking collateral, handling funding transactions and settlement. More details on the implementation of the application will be provided in a future article.
 
 ### 5.3 timeframe (December 2020 - January 2021)
 
-#### Side chains POC
+#### [Side chains POC](https://github.com/BeamMW/roadmap/issues/15)
 
 As we move forward it becomes clear that not all of the features could be natively supported on the mainnet while at the same time maintaining its stability and integrity. However, we also do not want to ever stop innovating and taking Beam and its underlying protocols to new extremes. The way to combine these two opposing desires is by introducing side chains.
 
@@ -115,7 +115,7 @@ Depending on their purpose, side chains can be either created empty or use their
 
 ### 5.1 (July - August, 2020)
 
-#### Bridges to Ethereum
+#### [Bridges to Ethereum](https://github.com/BeamMW/roadmap/issues/16)
 
 Despite providing a lot of value within the Beam chain, it is clear that having the ability to represent wrapped tokens from other networks would provide enormous benefits and possibilities for expansion and adoption. Ethereum as a leading DeFi platform today is clearly the top candidate for such integration. We can think of two possible architectures for Beam <> Eth bridges: federated and decentralized. 
 
