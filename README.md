@@ -2,7 +2,7 @@
 
 ## Overview
 
-From its launch on January 3rd 2019, Beam hasd released four major versions, each bringing a different set of features and improvements. 
+From its launch on January 3rd 2019, Beam has released four major versions, each bringing a different set of features and improvements. 
 
 The recent release of Eager Electron 5.0 marks a beginning of a new era in Beam development. What started as a best in class confidential and scalable cryptocurrency a little over two years ago, is now expanding to new and exciting product paths, a combination of both product and technology. We chose to call it Confidential DeFi and it will be an integral part of Beam Roadmap for the next year or more. In this article we will outline the rough draft of our Roadmap. Our goal is to discuss it both internally and with the community during the coming weeks and then release an official update. 
 
