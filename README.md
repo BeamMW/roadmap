@@ -141,14 +141,18 @@ Next major version will come with a fork that will not change the PoW algorithm 
 
 The following is a list of topics that were raised but not prioritized
 
-Atomic Swaps with Eth
-Multisig wallets requiring several signatures to sign the transaction
-Audit system that can monitor multiple wallets
-Add Dandelion protocol to SBBS messages
+[Atomic Swaps with Eth](https://github.com/BeamMW/roadmap/issues/23)
 
-Multisig
-Audit wallet 
+[Multisig](https://github.com/BeamMW/roadmap/issues/20)
+Multisig wallets requiring several signatures to sign the transaction
+
+[Audit wallet](https://github.com/BeamMW/roadmap/issues/19)
+Audit system that can monitor multiple wallets
+
 [TOR/i2p integration](https://github.com/BeamMW/roadmap/issues/18)
-mixNet integreaiono 
-SBBS over dandelion 
+
+[Mixnet Integration](https://github.com/BeamMW/roadmap/issues/21)
+
+[SBBS over dandelion](https://github.com/BeamMW/roadmap/issues/22)
+Add Dandelion protocol to SBBS messages
 
