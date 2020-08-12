@@ -148,7 +148,7 @@ Add Dandelion protocol to SBBS messages
 
 Multisig
 Audit wallet 
-TOR/i2p integration 
+[TOR/i2p integration](https://github.com/BeamMW/roadmap/issues/18)
 mixNet integreaiono 
 SBBS over dandelion 
 
